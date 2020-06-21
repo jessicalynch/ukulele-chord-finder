@@ -34,9 +34,7 @@ Ukulele::~Ukulele()
     
     int i = 0;
     for (i = 0; i < 4; ++i) 
-    {
         delete fretboard[i];
-    }
 
     delete fretboard;
 }
@@ -100,10 +98,10 @@ void Ukulele::printChord(string rootNote, string chordType)
     }
     
     // Print the shape
+    /* TODO: add private functions for diagram and tab format */
     for (i = 0; i < NUM_STRINGS; i++)
-    {
         cout << notes[fretboard[i][0]] << " |--" << shape[i] << "--|" << endl;
-    }
+    
 
 }
 
